@@ -1,0 +1,18 @@
+Kevin Adi Santoso
+24060123130081
+No 1. Jelaskan Bagaimana cara kerja Kode Lengan di atas!
+
+Kode diatas menggambarkan model tangan sederhana bersegmen 2 yang bisa digerakkan. 
+Variabel global shoulder dan elbow menyimpan sudut rotasi masing-masing segmen. 
+Fungsi init() = warna latar belakang dan shade model
+
+Fungsi display() = menggambarkan lengan dengan transformasi berurutan.
+Steps = mentranslasi posisi, merotasi dari nilai shoulder, lalu menggambar kubus sbg lengan atas.
+Lanjut, transformasi lanjut ke ujung lengan atas, dirotasi berdasarkan nilai elbow, dan menggambar kubus kedua sbg lengan bawah. 
+glPushMatrix() dan glPopMatrix() mengisolasikan transformasi.
+
+Fungsi reshape() menghandle ukuran jendela,
+fungsi keyboard() memberikan user control yaitu rotasi dengan tombol 's'/'S' untuk bahu dan 'e'/'E' untuk siku. 
+Perubahan 5 derajat, refresh tampilan. 
+Fungsi main() menginisialisasi GLUT, mengatur window, dan menjalankan loop program.
+Hasilnya adalah simulasi sederhana dimana bahu mempengaruhi seluruh lengan.
